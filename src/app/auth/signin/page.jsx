@@ -14,11 +14,8 @@ const signInPage = () => {
             email: userData.email, // required, The email address of the user.
             password: userData.password, // required, The password of the user. It should be at least 8 characters long and max 128 by default.
             rememberMe: true, // If false, the user will be signed out when the browser is closed. (optional) (default: true)
+            callbackURL: '/home'
         });
-        console.log(data, error);
-        if (!error) {
-        window.location.href = "/auth/pricing";
-    }
     };
     
 

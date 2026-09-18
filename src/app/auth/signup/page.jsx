@@ -13,14 +13,12 @@ const signUpPage = () => {
             name: userData.name, // required, The name of the user.
             email: userData.email, // required, The email address of the user.
             password: userData.password, // required, The password of the user. It should be at least 8 characters long and max 128 by default.
-            callbackURL: '/',
         });
-        console.log(data, error);
+        
+        if (!error) {
+            window.location.href = "/auth/signin";
+        }
     };
-
-    if (!error) {
-        window.location.href = "/auth/feature";
-    }
 
     return (
         <div className="min-h-screen flex my-10 justify-center">
